@@ -18,32 +18,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$base-font-size:0;
+$base-height:44px;
 .v-header {
   position: absolute;
   top: 0;
   left: 0;
   width: 375px;
-  height: 44px;
+  height: $base-height;
   background: #FFFFFF;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   .header-ul {
     li {
-      display: inline-block;
-      line-height: 44px;
-      padding-left: 30px;
+      display: block;
+      float: left;
+      line-height: $base-height;
+      padding-left: 20px;
       font-family: PingFangSC-Regular;
       font-size: 16px;
       color: #71777D;
       letter-spacing: 0;
       img {
         width: 18px;
+        vertical-align: middle;
       }
     }
     .search {
-      padding-left: 39px;
+      font-size: $base-font-size;
+      padding-left: 59px;
     }
     .history {
-      padding-left: 15px;
+      font-size: $base-font-size;
     }
   }
 }
