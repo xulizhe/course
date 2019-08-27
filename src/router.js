@@ -8,7 +8,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
       component: () => import('./views/Home/index'),
       children: [
         {
