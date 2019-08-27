@@ -1,7 +1,11 @@
 <template>
   <div class="home">
     <v-header></v-header>
-    <v-banner></v-banner>
+    <div class="content">
+      <v-banner></v-banner>
+      <router-link to="/home/detail">dddddd</router-link>
+      <router-view></router-view>
+    </div>
     <v-footer></v-footer>
   </div>
 </template>
@@ -29,5 +33,9 @@ export default {
     padding-top: 44px;
     padding-bottom: 49px;
     box-sizing: border-box;
+    .content {
+      height: 100%;
+      width: 100%;
+    }
   }
 </style>

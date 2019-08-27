@@ -16,7 +16,7 @@ export default {
         {
           img: require('./sea.png'),
           title: '首页',
-          name: ''
+          name: 'home'
         },
         {
           img: require('./sea.png'),
@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     jumpPage: function (name) {
-      this.$router.push(`/${name}`).catch(err=>{})
+      this.$router.push(`/${name}`)
     }
   }
 }
