@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     jumpPage: function (path) {
-      if(!path){
+      if (!path) {
         return
       }
       this.$router.push(`/${path}`)
