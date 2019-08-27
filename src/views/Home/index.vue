@@ -7,16 +7,16 @@
 </template>
 
 <script>
-import VHeader from '@/components/VHeader/VHeader.vue'
-import VFooter from '@/components/VFooter/VFooter.vue'
+  import VHeader from '@/components/VHeader/VHeader.vue'
+  import VFooter from '@/components/VFooter/VFooter.vue'
 
-export default {
-  name: 'Home',
-  components: {
-    VHeader,
-    VFooter
+  export default {
+    name: 'index',
+    components: {
+      VHeader,
+      VFooter
+    }
   }
-}
 </script>
 <style lang="scss" scoped>
   .home {

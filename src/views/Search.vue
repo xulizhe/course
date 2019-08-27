@@ -1,21 +1,12 @@
 <template>
-  <div class="search">
+  <div >
     Search
   </div>
 </template>
 
 <script>
 export default {
-  name: 'search'
+  name: 'Search'
 }
 </script>
 
-<style lang="scss" scoped>
-  .search {
-    height: 100%;
-    width: 100%;
-    padding-top: 44px;
-    padding-bottom: 49px;
-    box-sizing: border-box;
-  }
-</style>

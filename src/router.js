@@ -7,13 +7,19 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/home',
+      path: '/',
       name: 'home',
-      component: () => import('./views/Home'),
-      children: [{
-        path: 'detail',
-        component: () => import('./views/Detail')
-      }]
+      component: () => import('./views/Home/index'),
+      children: [
+        {
+          path: '/',
+          component: () => import('./views/Home/List')
+        },
+        {
+          path: 'detail',
+          component: () => import('./views/Home/Detail')
+        }
+      ]
     },
     {
       path: '/search',
