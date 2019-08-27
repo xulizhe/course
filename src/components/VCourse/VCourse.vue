@@ -97,11 +97,12 @@ export default {
           this.list.push({
             imgUrl: require(`./course${n}.jpg`),
             title: '实例妙解Sed和Awk的秘密',
-            msg: '中级 · 330人在学'
+            msg: '中级 · 330人在学',
+            percent: `已学9${n}%`
           })
         }
         this.loading = false
-      }, 2500)
+      }, 500)
     }
   }
 }
