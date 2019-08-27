@@ -1,8 +1,8 @@
 <template>
 <div class="v-footer">
   <div class="footer" v-for="(item,index) in footers" :key="index">
-    <a href="#"><img class="img" :src="item.img"></a>
-    <span class="title" :class="{'active':item.isActive}">{{item.title}}</span>
+    <a :name="item.name" @click="jumpPage(item.name)"><img class="img" :src="item.img"></a>
+    <span class="title">{{item.title}}</span>
   </div>
 </div>
 </template>
@@ -14,23 +14,31 @@ export default {
     return {
       footers: [
         {
-          img: require('./home.png'),
+          img: require('./sea.png'),
           title: '首页',
-          isActive: true
+          name: 'home'
         },
         {
           img: require('./sea.png'),
-          title: '发现'
+          title: '发现',
+          name: 'search'
         },
         {
           img: require('./download.png'),
-          title: '下载'
+          title: '下载',
+          name: 'download'
         },
         {
           img: require('./me.png'),
-          title: '我的'
+          title: '我的',
+          name: 'me'
         }
       ]
+    }
+  },
+  methods: {
+    jumpPage: function (name) {
+      this.$router.push(`/${name}`)
     }
   }
 }
@@ -58,6 +66,11 @@ export default {
         width: 24px;
       }
     }
+    a:active {
+      & + .title {
+        color: red;
+      }
+    }
     .title {
       margin-top: 4px;
       ont-family: PingFangSC-Regular;
@@ -65,9 +78,6 @@ export default {
       color: #2B333B;
       letter-spacing: 0;
       line-height: 10px;
-    }
-    .active {
-      color:red;
     }
   }
 }
