@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <v-header></v-header>
-    <home></home>
-    <v-footer></v-footer>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -20,15 +18,4 @@
   a{
     text-decoration: none;
   }
-  #app {
-    position: relative;
-  }
 </style>
-<script>
-import VHeader from '@/components/VHeader/VHeader.vue'
-import VFooter from '@/components/VFooter/VFooter.vue'
-import Home from './views/Home'
-export default {
-  components: { Home, VHeader, VFooter }
-}
-</script>

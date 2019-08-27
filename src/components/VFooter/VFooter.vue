@@ -16,7 +16,7 @@ export default {
         {
           img: require('./sea.png'),
           title: '首页',
-          name: 'home'
+          name: ''
         },
         {
           img: require('./sea.png'),
