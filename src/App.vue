@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-header></v-header>
-    <home class="page-content"></home>
+    <home></home>
     <v-footer></v-footer>
   </div>
 </template>
@@ -12,7 +12,7 @@
     padding: 0;
     list-style: none;
   }
-  html, body, #app ,.page-content{
+  html, body, #app{
     width: 100%;
     height: 100%;
     /*overflow: hidden;*/
