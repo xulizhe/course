@@ -1,6 +1,6 @@
 <template>
 <div class="download">
-  Download
+  <h1>Download</h1>
 </div>
 </template>
 
