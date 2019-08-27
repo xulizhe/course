@@ -6,14 +6,14 @@
 </template>
 
 <script>
-  import VBanner from '@/components/VBanner/VBanner.vue'
+import VBanner from '@/components/VBanner/VBanner.vue'
 
-  export default {
-    name: 'HomeList',
-    components: {
-      VBanner
-    }
+export default {
+  name: 'HomeList',
+  components: {
+    VBanner
   }
+}
 </script>
 
 <style lang="scss" scoped>
