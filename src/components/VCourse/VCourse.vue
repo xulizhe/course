@@ -1,7 +1,7 @@
 <template>
   <div class="v-course" v-infinite-scroll="loadMore"
        infinite-scroll-distance="20">
-    <div class="course" v-for="(item,index) in list" :key="index">
+    <div class="course" @click="jumpPage" v-for="(item,index) in list" :key="index">
       <div class="left">
         <img v-lazy="item.imgUrl">
       </div>
@@ -81,6 +81,9 @@ export default {
     }
   },
   methods: {
+    jumpPage: function () {
+      console.log('jumpPage')
+    },
     loadMore: function () {
       if (this.loading) {
         return
@@ -105,47 +108,49 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.course {
-  width: 335px;
-  height: 72px;
-  margin: 24px 20px 0 20px;
-  display: flex;
-  .left{
-    width: 108px;
-    height: 72px;
-    img {
-      width: 108px;
+  .v-course {
+    .course {
+      width: 335px;
       height: 72px;
-    }
-  }
-  .right {
-    flex: 1;
-    box-sizing: border-box;
-    padding-left: 16px;
-    .title{
-      font-family: PingFangSC-Regular;
-      font-size: 15px;
-      color: #2B333B;
-      letter-spacing: 0;
-      line-height: 17px;
-    }
-    .cont {
-      margin-top: 8px;
+      margin: 24px 20px 0 20px;
       display: flex;
-      .msg{
-        font-family: PingFangSC-Light;
-        font-size: 12px;
-        color: #71777D;
-        line-height: 14px;
+      .left{
+        width: 108px;
+        height: 72px;
+        img {
+          width: 108px;
+          height: 72px;
+        }
       }
-      .percent {
-        margin-right: 8px;
-        font-family: PingFangSC-Light;
-        font-size: 12px;
-        color: #20CC85;
-        line-height: 14px;
+      .right {
+        flex: 1;
+        box-sizing: border-box;
+        padding-left: 16px;
+        .title{
+          font-family: PingFangSC-Regular;
+          font-size: 15px;
+          color: #2B333B;
+          letter-spacing: 0;
+          line-height: 17px;
+        }
+        .cont {
+          margin-top: 8px;
+          display: flex;
+          .msg{
+            font-family: PingFangSC-Light;
+            font-size: 12px;
+            color: #71777D;
+            line-height: 14px;
+          }
+          .percent {
+            margin-right: 8px;
+            font-family: PingFangSC-Light;
+            font-size: 12px;
+            color: #20CC85;
+            line-height: 14px;
+          }
+        }
       }
     }
   }
-}
 </style>
