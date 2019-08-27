@@ -53,7 +53,7 @@ export default {
   bottom: 0;
   left: 0;
   opacity: 0.9;
-  background: darkgray;
+  background: #FFFFFF;
   height: 49px;
   width: 375px;
   display: flex;

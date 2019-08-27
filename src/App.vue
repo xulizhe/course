@@ -15,6 +15,9 @@
     height: 100%;
     /*overflow: hidden;*/
   }
+  body {
+    -webkit-overflow-scrolling:touch;
+  }
   a{
     text-decoration: none;
   }
