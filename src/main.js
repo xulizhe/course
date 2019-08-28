@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import 'amfe-flexible/index'
+import 'amfe-flexible'
 import { Lazyload, InfiniteScroll } from 'mint-ui'
 Vue.use(Lazyload)
 Vue.use(InfiniteScroll)

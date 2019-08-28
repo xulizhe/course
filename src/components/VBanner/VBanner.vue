@@ -42,7 +42,7 @@ export default {
   background: #F3F5F7;
   display: flex;
   .banner {
-    margin: 20px;
+    margin: 20px 18.5px;
     display: flex;
     flex-direction: column;
     a {
