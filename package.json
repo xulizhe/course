@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "amfe-flexible": "^2.2.1",
     "core-js": "^2.6.5",
     "mint-ui": "^2.2.13",
     "vue": "^2.6.10",
@@ -24,6 +25,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "postcss-px2rem": "^0.3.0"
   }
 }

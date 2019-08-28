@@ -64,6 +64,8 @@ export default {
     flex-direction: column;
     align-items: center;
     a {
+      display: block;
+      line-height: 0;
       height: 24px;
       .img{
         width: 24px;
