@@ -102,7 +102,7 @@ export default {
           })
         }
         this.loading = false
-      }, 500)
+      }, 5000)
     }
   }
 }
