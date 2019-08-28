@@ -82,7 +82,7 @@ export default {
   },
   methods: {
     jumpPage: function () {
-      console.log('jumpPage')
+      this.$router.push('/detail')
     },
     loadMore: function () {
       if (this.loading) {
