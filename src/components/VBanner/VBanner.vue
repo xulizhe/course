@@ -46,6 +46,8 @@ export default {
     display: flex;
     flex-direction: column;
     a {
+      display: block;
+      line-height: 0;
       height: 32px;
       margin: 0 12px 12px 12px;
       .img{
