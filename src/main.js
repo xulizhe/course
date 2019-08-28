@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import 'amfe-flexible'
 import { Lazyload, InfiniteScroll } from 'mint-ui'
+import Vconsole from 'vconsole'
+const vConsole = new Vconsole()
+Vue.use(vConsole)
 Vue.use(Lazyload)
 Vue.use(InfiniteScroll)
 Vue.config.productionTip = false
