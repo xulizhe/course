@@ -1,7 +1,7 @@
 <template>
 <div class="v-header">
 <ul class="header-ul">
-  <li>推荐</li>
+  <li @click="select" :class="{active:this.isActive}">推荐</li>
   <li>课程</li>
   <li>实战</li>
   <li>职业路径</li>
@@ -13,7 +13,17 @@
 
 <script>
 export default {
-  name: 'VHeader'
+  name: 'VHeader',
+  data () {
+    return {
+      isActive: false
+    }
+  },
+  methods: {
+    select: function () {
+      this.isActive = !this.isActive
+    }
+  }
 }
 </script>
 
@@ -30,20 +40,32 @@ $base-height:44px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   .header-ul {
     li {
+      position: relative;
       display: block;
       float: left;
       line-height: $base-height;
-      padding-left: 20px;
+      margin-left: 20px;
       font-family: PingFangSC-Regular;
       font-size: 16px;
       color: #71777D;
       letter-spacing: 0;
+      &.active:after {
+        position: absolute;
+        bottom: 7px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        content: '';
+        width: 70%;
+        height: 2px;
+        background: #f01414;
+      }
       img {
         width: 18px;
         vertical-align: middle;
       }
     }
     .search {
+      margin-left: 0;
       font-size: $base-font-size;
       padding-left: 59px;
     }
