@@ -17,6 +17,18 @@ export default new Router({
         {
           path: 'detail',
           component: () => import('./views/Home/Detail')
+        },
+        {
+          path: 'actual',
+          component: () => import('./views/Home/Actual')
+        },
+        {
+          path: 'career',
+          component: () => import('./views/Home/Career')
+        },
+        {
+          path: 'recommend',
+          component: () => import('./views/Home/Recommend')
         }
       ]
     },

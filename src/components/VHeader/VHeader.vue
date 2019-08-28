@@ -1,10 +1,10 @@
 <template>
 <div class="v-header">
 <ul class="header-ul">
-  <li @click="select" :class="{active:this.isActive}">推荐</li>
-  <li>课程</li>
-  <li>实战</li>
-  <li>职业路径</li>
+  <li v-for="(item,index) in menuList"
+      :key="index" @click="select(item)"
+      :class="{active:activeId === item.id}"
+      >{{item.name}}</li>
   <li class="search"><img src="./search.png"></li>
   <li class="history"><img src="./history.png"></li>
 </ul>
@@ -16,12 +16,32 @@ export default {
   name: 'VHeader',
   data () {
     return {
-      isActive: false
+      activeId: 2,
+      menuList: [
+        {
+          id: 1,
+          name: '推荐',
+          link: '/recommend'
+        }, {
+          id: 2,
+          name: '课程',
+          link: '/'
+        }, {
+          id: 3,
+          name: '实战',
+          link: '/actual'
+        }, {
+          id: 4,
+          name: '职业路径',
+          link: '/career'
+        }
+      ]
     }
   },
   methods: {
-    select: function () {
-      this.isActive = !this.isActive
+    select: function (menu) {
+      this.activeId = menu.id
+      this.$router.push(menu.link)
     }
   }
 }
