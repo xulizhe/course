@@ -15,11 +15,8 @@
         </div>
       </div>
     </div>
-    <!--显示加载中转菊花-->
     <div class="loading" v-if="loading">加载中...</div>
   </div>
-
-<!--  <div class="no-more" v-if="noMore">没有更多了~</div>-->
 </template>
 
 <script>
