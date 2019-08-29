@@ -1,7 +1,6 @@
 <template>
   <div class="content">
     <v-banner></v-banner>
-<!--    <router-link to="/detail">查看详情</router-link>-->
     <v-course></v-course>
   </div>
 </template>

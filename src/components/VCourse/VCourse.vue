@@ -1,19 +1,25 @@
 <template>
-  <div class="v-course" v-infinite-scroll="loadMore"
-       infinite-scroll-distance="20">
-    <div class="course" @click="jumpPage" v-for="(item,index) in list" :key="index">
-      <div class="left">
-        <img v-lazy="item.imgUrl">
-      </div>
-      <div class="right">
-        <p class="title">{{item.title}}</p>
-        <div class="cont">
-          <p class="percent" v-if="item.percent">{{item.percent}}</p>
-          <p class="msg">{{item.msg}}</p>
+  <div>
+    <div class="v-course" v-infinite-scroll="loadMore"
+         infinite-scroll-distance="20">
+      <div class="course" @click="jumpPage" v-for="(item,index) in list" :key="index">
+        <div class="left">
+          <img v-lazy="item.imgUrl">
+        </div>
+        <div class="right">
+          <p class="title">{{item.title}}</p>
+          <div class="cont">
+            <p class="percent" v-if="item.percent">{{item.percent}}</p>
+            <p class="msg">{{item.msg}}</p>
+          </div>
         </div>
       </div>
     </div>
+    <!--显示加载中转菊花-->
+    <div class="loading" v-if="loading">加载中...</div>
   </div>
+
+<!--  <div class="no-more" v-if="noMore">没有更多了~</div>-->
 </template>
 
 <script>
@@ -109,6 +115,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .loading {
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    line-height: 60px;
+  }
   .v-course {
     .course {
       width: 335px;
