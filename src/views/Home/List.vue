@@ -14,6 +14,12 @@ export default {
   components: {
     VBanner,
     VCourse
+  },
+  beforeDestroy () {
+    console.log('beforeDestroy')
+  },
+  destroyed () {
+    console.log('destroyed')
   }
 }
 </script>
